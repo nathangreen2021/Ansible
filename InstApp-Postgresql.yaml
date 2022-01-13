@@ -1,0 +1,11 @@
+--- 
+- hosts: all
+  connection: ssh
+  gather_facts: yes
+  tasks:
+  - name: Install postgresql
+    yum: 
+      name: 
+      - postgresql
+      - postgresql-server
+      state: present

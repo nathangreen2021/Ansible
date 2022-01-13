@@ -1,0 +1,13 @@
+- hosts: all
+  tasks:
+    - name: check date
+      command: date
+      register: out
+    - debug: msg={{out.stdout}}
+ 
+    - pause: minutes=30
+ 
+    - name: check date
+      command: date
+      register: out
+    - debug: msg={{out.stdout}}

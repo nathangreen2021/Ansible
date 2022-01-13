@@ -1,0 +1,13 @@
+- hosts: kbpause
+  tasks:
+    - name: check date
+      command: date
+      register: out
+    - debug: msg={{out.stdout}}
+ 
+    - pause: minutes=1
+ 
+    - name: check date
+      command: date
+      register: out
+    - debug: msg={{out.stdout}}

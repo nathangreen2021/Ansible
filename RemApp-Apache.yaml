@@ -1,0 +1,12 @@
+--- 
+- hosts: all
+  remote_user: root
+  connection: ssh
+  gather_facts: yes
+  vars:
+    username: Dduri
+  tasks:
+  - name: Remove Apache
+    yum: 
+      name: httpd
+      state: removed

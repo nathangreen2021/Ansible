@@ -1,0 +1,16 @@
+--- 
+- hosts: all
+  remote_user: root
+  connection: ssh
+  gather_facts: yes
+  vars:
+    username: dduri
+  tasks:
+  - name: Install postgresql
+    yum: 
+      name: 
+      - postgresql
+      - postgresql-server
+      state: present
+    tags:
+    - InstApp-Postresql

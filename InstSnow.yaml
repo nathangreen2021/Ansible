@@ -1,11 +1,15 @@
-tasks:
+--- 
+- 
+  hosts: all
+  gather_facts: yes
+  tasks:
   - name: Unzip Snow Integration Manager
     ansible.builtin.unarchive:
     src: https://ftp.snowsoftware.com/SetupPackages/CurrentProductVersions/SIM/SetupSIM_5.40.zip
     dest: C:\Local Folder
     remote_src: yes
-tasks:
-  -name: Run Package
+  tasks:
+  - name: Run Package
     ansible.windows.win_package:
     path: C:\Local Folder\SetupSIM_5.40\SetupSIM_5.40,exe
     state: present

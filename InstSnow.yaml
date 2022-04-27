@@ -1,5 +1,5 @@
 tasks:
-  - name: Install Snow Integration Manager
+  - name: Unzip Snow Integration Manager
     ansible.builtin.unarchive:
     src: https://ftp.snowsoftware.com/SetupPackages/CurrentProductVersions/SIM/SetupSIM_5.40.zip
     dest: C:\Local Folder
